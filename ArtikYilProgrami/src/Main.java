@@ -16,6 +16,6 @@ public class Main {
             System.out.println(yıl + " Bir Artık Yıldır. ");
         } else {
             System.out.println(yıl + " Bir Artık Yıl Değildir. ");
-            }
         }
     }
+}
