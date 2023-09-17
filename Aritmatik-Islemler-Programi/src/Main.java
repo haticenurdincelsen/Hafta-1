@@ -1,17 +1,20 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-    Scanner input=new Scanner(System.in);
-    //scanner sınıfını tanımlayıp kullanıcıdan veri aldık.
-    int sonuc;
-        System.out.print("Lütfen 1. veriyi giriniz : ");
-        int a=input.nextInt();
-        System.out.print("Lütfen 2. veriyi giriniz : ");
-        int b=input.nextInt();
-        System.out.print("Lütfen 3. veriyi giriniz : ");
-        int c=input.nextInt();
-    //matematiksel formülü girip sonucu ekrana yazdırdık.
-        sonuc=(a+(b*c)-b);
-        System.out.println("sonuç :" +sonuc);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("a sayısını girin: ");
+        double a = scanner.nextDouble();
+
+        System.out.print("b sayısını girin: ");
+        double b = scanner.nextDouble();
+
+        System.out.print("c sayısını girin: ");
+        double c = scanner.nextDouble();
+
+        double sonuc = a + b * c - b;
+
+        System.out.println("Sonuç: " + sonuc);
     }
 }
