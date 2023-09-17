@@ -1,18 +1,25 @@
+import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        int sayac=0;
-        for (int sayi=2;sayi<=100;sayi++){
-            int input=0;
-            for (int i=2;i<sayi;i++){
-                if (sayi%i==0){
-                    input=1;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Üst Sınırı Giriniz :");
+        int ustSinir = input.nextInt();
+
+        System.out.println("1 ile " + ustSinir +" arasındaki asal sayılar :");
+        for (int i = 2; i <= ustSinir; i++) {
+            boolean asal = true;
+            for (int j = 2; j < i; j++){
+                if (i % j == 0){
+                    asal = false;
                     break;
                 }
             }
-    if (input==0){
-    System.out.print(sayi+",");
-    sayac++;
+            if (asal) {
+                System.out.print(i + " ");
+
             }
         }
     }
