@@ -1,20 +1,21 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int Ssayısı;
-        System.out.print("Basamak Giriniz : ");
-        Ssayısı = input.nextInt();
-        //Ters Üçgen yapımı
-        for (int i=Ssayısı;i>0;i--){
-            for (int k = 0; k < Ssayısı - i; k++) {
-                System.out.print(" ");
-            }
-            for (int m = 0; m < 2 * i- 1; m++) {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+        // üçgenin yüksekliğini kullanıcıdan almak için Scanner sınıfı tanımlıyoruz.
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Üçgenin yüksekliğini giriniz: ");
+        // Yüksekliği n değişkenine atıyoruz.
+        int n = scanner.nextInt();
 
+        for (int i = n; i >= 1; i--) {
+            for (int j = n - i; j > 0; j--) {
+                System.out.print(" "); // Boşlukları ekliyoruz
+            }
+            for (int k = 1; k <= i * 2 - 1; k++) {
+                System.out.print("*"); // Yıldızları ekliyoruz
+            }
+            System.out.println(); // Burada satırı tamamlıyoruz.
+        }
     }
 }
